@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+var dir = process.argv[2];
+var out = process.argv[3];
+var fs = require('fs');
+var path = require('path');
+var snappy = require('snappy');
+
+if (!out || !dir) 
+  process.exit(0);
+
+var jsonFiles = fs.readdirSync(dir).filter(function(fname) { return path.extname(fname) === '.json'; });
+var concat = {};
+jsonFiles.forEach(function (fname) {
+  concat[fname] = JSON.parse(fs.readFileSync(path.join(dir, fname)));
+});
+
+fs.writeFileSync(out, snappy.compressSync(JSON.stringify(concat)));

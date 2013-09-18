@@ -1,0 +1,25 @@
+{
+  "name" : "jaysoned",
+  "version" : "0.1",
+  "description" : "Quick 'n Dirty JSON Concatenation/Compression utility",
+  "keywords": [],
+  "author": "Mathieu D'Amours <mathieu@storm.io>",
+  "main": "./lib/index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "directories": {
+    "lib": "./lib",
+    "docs": "./docs"
+  },
+  "bin": {
+    "jaysoned": "./bin/jaysoned"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matehat/jaysoned.js.git"
+  },
+  "dependencies": {
+    "snappy": "~2"
+  }
+}
