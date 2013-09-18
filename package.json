@@ -1,6 +1,6 @@
 {
   "name" : "jaysoned",
-  "version" : "0.1",
+  "version" : "0.1.0",
   "description" : "Quick 'n Dirty JSON Concatenation/Compression utility",
   "keywords": [],
   "author": "Mathieu D'Amours <mathieu@storm.io>",
