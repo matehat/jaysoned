@@ -16,3 +16,4 @@ jsonFiles.forEach(function (fname) {
 });
 
 fs.writeFileSync(out, snappy.compressSync(JSON.stringify(concat)));
+console.log("Compressed concatenation written to", out);
